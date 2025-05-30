@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Food Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fast Food Simulator</h1>
+        
+        <div class="settings">
+            <div class="setting-group">
+                <label for="customerInterval">Customer Arrival Interval (ms):</label>
+                <input type="number" id="customerInterval" value="2000">
+            </div>
+            <div class="setting-group">
+                <label for="cookingTime">Cooking Time (ms):</label>
+                <input type="number" id="cookingTime" value="3000">
+            </div>
+            <div class="setting-group">
+                <label for="orderTakingTime">Order Taking Time (ms):</label>
+                <input type="number" id="orderTakingTime" value="1000">
+            </div>
+            <div class="setting-group">
+                <label for="serverDeliveryTime">Server Delivery Time (ms):</label>
+                <input type="number" id="serverDeliveryTime" value="1000">
+            </div>
+        </div>
+
+        <div class="controls">
+            <span id="simStatus" class="simulation-status">Simulazione non attiva</span>
+            <button id="startBtn">Start Simulation</button>
+            <button id="stopBtn" disabled>Stop Simulation</button>
+        </div>
+
+        <div class="simulation">
+            <div class="area order-line">
+                <h2>Order Line</h2>
+                <div class="queue-visualization">
+                    <div class="customer-queue"></div>
+                </div>
+                <p>Customers Waiting: <span id="customerCount">0</span></p>
+            </div>
+
+            <div class="area kitchen">
+                <h2>Kitchen</h2>
+                <div class="kitchen-visualization">
+                    <div class="cook">👨‍🍳</div>
+                    <div class="orders-in-preparation"></div>
+                </div>
+                <p>Current Order: <span id="currentOrder">None</span></p>
+                <p>Waiting Orders: <span id="waitingOrders">0</span></p>
+            </div>
+
+            <div class="area pickup">
+                <h2>Pickup Area</h2>
+                <div class="pickup-visualization">
+                    <div class="server">👨‍💼</div>
+                    <div class="pickup-orders"></div>
+                    <div class="pickup-customers"></div>
+                </div>
+                <p>Ready Order: <span id="readyOrder">None</span></p>
+                <p>Customers Waiting: <span id="pickupCustomers">0</span></p>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
