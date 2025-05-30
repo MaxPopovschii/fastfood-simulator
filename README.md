@@ -99,7 +99,7 @@ graph LR
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👥 Authors
-- Your Name - *Initial work* - [MyGithub](https://github.com/MaxPopovschii)
+- Max Popovschii - *Initial work* - [Max Popovschii](https://github.com/MaxPopovschii)
 
 ## 🙏 Acknowledgments
 - Inspired by real-world fast food operations
